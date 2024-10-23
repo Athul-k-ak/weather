@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+        <h1 class="text-center mb-4">Weather Dashboard</h1>
+
+        <div class="search-section form-inline mb-3">
+            <input type="text" id="cityInput" class="form-control mr-2" placeholder="Enter city name">
+            <button id="searchBtn" class="btn btn-primary">Get Weather</button>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="spinner hidden"></div>
+
+        <!-- Weather Details -->
+        <div id="weatherDetails" class="card bg-light text-center transparent-card hidden mt-4">
+            <div class="card-body">
+                <h2 class="card-title">Weather in <span id="cityName"></span></h2>
+                <div class="temp-weather d-flex justify-content-center align-items-center">
+                    <h1 id="temperature" class="display-1"></h1>
+                    <img id="weatherIcon" src="" alt="Weather Icon" class="weather-icon ml-3">
+                </div>
+                <p class="card-text">Weather: <span id="weather"></span></p>
+                <p class="card-text">Humidity: <span id="humidity"></span>%</p>
+                <p class="card-text">Wind Speed: <span id="windSpeed"></span> m/s</p>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="alert alert-danger hidden mt-3"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

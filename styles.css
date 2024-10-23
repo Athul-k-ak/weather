@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20201012/pngtree-white-cloud-on-blue-sky-weather-background-image_410050.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    height: 75%;
+    width: 50%;
+}
+
+h1 {
+    color: #333;
+}
+
+.search-section input {
+    width: auto;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+button {
+    flex-grow: 0;
+}
+
+.transparent-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.temp-weather {
+    display: flex;
+    align-items: center;
+}
+
+#temperature {
+    font-size: 4rem;
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+#errorMessage {
+    font-weight: bold;
+}
