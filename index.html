@@ -10,8 +10,12 @@
 </head>
 <body>
     <div class="container d-flex flex-column justify-content-center align-items-center vh-100">
-        <h1 class="text-center mb-4">Weather Dashboard</h1>
+        <div class="header text-center mb-4">
+            <h1>Weather Dashboard</h1>
+            <p>Get real-time weather information</p>
+        </div>
 
+        <!-- Search Section -->
         <div class="search-section form-inline mb-3">
             <input type="text" id="cityInput" class="form-control mr-2" placeholder="Enter city name">
             <button id="searchBtn" class="btn btn-primary">Get Weather</button>
@@ -21,16 +25,33 @@
         <div id="loadingSpinner" class="spinner hidden"></div>
 
         <!-- Weather Details -->
-        <div id="weatherDetails" class="card bg-light text-center transparent-card hidden mt-4">
-            <div class="card-body">
-                <h2 class="card-title">Weather in <span id="cityName"></span></h2>
-                <div class="temp-weather d-flex justify-content-center align-items-center">
-                    <h1 id="temperature" class="display-1"></h1>
-                    <img id="weatherIcon" src="" alt="Weather Icon" class="weather-icon ml-3">
+        <div id="weatherDetails" class="weather-card hidden">
+            <h2 id="cityName" class="city-name"></h2>
+            <div class="weather-main d-flex align-items-center justify-content-center mb-3">
+                <h1 id="temperature" class="display-1"></h1>
+                <img id="weatherIcon" src="" alt="Weather Icon" class="weather-icon ml-3">
+            </div>
+            <p id="weather" class="weather-status"></p>
+
+            <div class="row">
+                <div class="col">
+                    <div class="info-card">
+                        <p>Humidity</p>
+                        <h3 id="humidity"></h3>
+                    </div>
                 </div>
-                <p class="card-text">Weather: <span id="weather"></span></p>
-                <p class="card-text">Humidity: <span id="humidity"></span>%</p>
-                <p class="card-text">Wind Speed: <span id="windSpeed"></span> m/s</p>
+                <div class="col">
+                    <div class="info-card">
+                        <p>Wind Speed</p>
+                        <h3 id="windSpeed"></h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="info-card">
+                        <p>Cloudiness</p>
+                        <h3 id="cloudiness"></h3>
+                    </div>
+                </div>
             </div>
         </div>
 

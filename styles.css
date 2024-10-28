@@ -1,52 +1,68 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
-    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20201012/pngtree-white-cloud-on-blue-sky-weather-background-image_410050.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, #8fd3f4, #84fab0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-h1 {
-    color: #333;
+.header h1, .header p {
+    color: #ffffff;
 }
 
 .search-section input {
     width: auto;
-    flex-grow: 1;
     max-width: 300px;
 }
 
-button {
-    flex-grow: 0;
-}
-
-.transparent-card {
-    background-color: rgba(255, 255, 255, 0.34);
-    border: none;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 15px;
-    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
 }
 
-.temp-weather {
-    display: flex;
-    align-items: center;
+.city-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-#temperature {
+.weather-main h1 {
     font-size: 4rem;
+    font-weight: 700;
 }
 
 .weather-icon {
     width: 80px;
     height: 80px;
+}
+
+.weather-status {
+    font-size: 1.2rem;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-card p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .spinner {
@@ -66,7 +82,12 @@ button {
 .hidden {
     display: none;
 }
-
-#errorMessage {
-    font-weight: bold;
+.header h1, p {
+    color: rgb(253, 251, 251);
+    text-shadow: 2px 2px 4px #000000;
+    
+}
+.weather-main h1{
+    color: yellow;
+    text-shadow: 2px 2px 4px #0000007a;
 }

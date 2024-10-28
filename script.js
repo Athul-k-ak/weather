@@ -36,13 +36,15 @@ const getWeather = async () => {
     }
 };
 
+
 // Function to display weather data on the UI
 const displayWeather = (data) => {
     document.getElementById('cityName').innerText = data.name;
-    document.getElementById('temperature').innerText = data.main.temp;
+    document.getElementById('temperature').innerText = `${data.main.temp}°C`;
     document.getElementById('weather').innerText = data.weather[0].description;
-    document.getElementById('humidity').innerText = data.main.humidity;
-    document.getElementById('windSpeed').innerText = data.wind.speed;
+    document.getElementById('humidity').innerText = `${data.main.humidity}%`;
+    document.getElementById('windSpeed').innerText = `${data.wind.speed} m/s`;
+    document.getElementById('cloudiness').innerText = `${data.clouds.all}%`;
 
     const iconCode = data.weather[0].icon;
     const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
@@ -51,16 +53,17 @@ const displayWeather = (data) => {
     showWeatherDetails();
 };
 
+
 // Function to change the background based on temperature
 const changeBackground = (temperature) => {
     const body = document.body;
 
     if (temperature < 10) {
-        body.style.backgroundImage = "url('https://t3.ftcdn.net/jpg/02/19/91/68/240_F_219916861_kw0CiRvySJtVocKs3JEgprlF5AYEVXm6.jpg')";
+        body.style.backgroundImage = "url('https://img.freepik.com/premium-photo/moonlit-melange-all-night-hustle-photo_960396-60792.jpg')";
     } else if (temperature >= 10 && temperature <= 25) {
-        body.style.backgroundImage = "url('https://media.istockphoto.com/id/807443942/photo/beautiful-blue-sky-with-cloud-and-copy-space-for-spring-summer-or-other-background.jpg?s=612x612&w=0&k=20&c=B8PgVfDbP_UwQ-L1Js2uj3ONDWVi_rR0t6gw2P-qpJ4=')";
+        body.style.backgroundImage = "url('https://images.pexels.com/photos/2531709/pexels-photo-2531709.jpeg?cs=srgb&dl=pexels-rodrigo-souza-1275988-2531709.jpg&fm=jpg')";
     } else {
-        body.style.backgroundImage = "url('https://scopeblog.stanford.edu/wp-content/uploads/2022/07/AdobeStock_268489083-scaled.jpeg')";
+        body.style.backgroundImage = "url('https://media.istockphoto.com/id/947314334/photo/blue-sky-with-bright-sun.jpg?s=612x612&w=0&k=20&c=XUlLAWDXBLYdTGIl6g_qHQ9IBBw4fBvkVuvL2dmVXQw=')";
     }
 
     body.style.backgroundSize = 'cover';
